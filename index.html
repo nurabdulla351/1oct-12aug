@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ১. গুগল সার্চে (SEO) পাওয়ার জন্য টাইটেল ও মেটা ট্যাগ -->
+  <title>1 oct & 12 aug ❤️</title>
+  <meta name="description" content="A special interactive memory space for 1 oct & 12 aug.">
+  <meta name="keywords" content="1 oct & 12 aug, 1oct 12aug, 1 oct, 12 aug">
+  <meta name="robots" content="index, follow">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fecfef);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* লগইন পেজ স্টাইল */
+    .login-container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-card {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 35px 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      text-align: center;
+      width: 85%;
+      max-width: 350px;
+    }
+
+    .login-card h2 {
+      color: #008000;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .login-card input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border: 2px solid #ffb6c1;
+      border-radius: 10px;
+      outline: none;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .login-card button {
+      width: 100%;
+      padding: 12px;
+      background: #d63384;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .error-msg {
+      color: #ff0055;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* মেইন ওয়েবসাইট কন্টেন্ট */
+    .main-website {
+      display: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* সবার উপরে হালকা আকাশি কালারের লেখা */
+    .sky-heading {
+      text-align: center;
+      color: #00bfff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      font-size: 38px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    /* ৪টি সেকশন বক্স */
+    .section-box {
+      background: #e8f5e9;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    /* পিল শেপ বাটন */
+    .pill-title {
+      color: #ffffff;
+      padding: 14px 25px;
+      border-radius: 50px;
+      border: 2.5px solid #000000;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+      user-select: none;
+      transition: transform 0.1s ease;
+    }
+
+    .pill-title:active {
+      transform: scale(0.98);
+    }
+
+    .pill-1 { background-color: #ffb6c1; }
+    .pill-2 { background-color: #006400; }
+    .pill-3 { background-color: #ff6b6b; }
+    .pill-4 { background-color: #f7d070; }
+
+    /* আনলকড সেকশন কন্টেন্ট */
+    .unlocked-content {
+      display: none;
+      text-align: center;
+      color: #444;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px dashed #bbb;
+    }
+
+    .content-item {
+      margin-bottom: 15px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    /* ছোট অ্যাশ কালারের তারিখ ও সময় স্টাইল */
+    .timestamp {
+      font-size: 11px;
+      color: #777777;
+      margin-bottom: 6px;
+      display: block;
+      font-weight: 500;
+    }
+
+    .content-item p {
+      margin: 5px 0;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .content-item img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      margin-top: 8px;
+    }
+
+    .add-btn {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    /* পাসওয়ার্ড মোডাল */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      width: 80%;
+      max-width: 320px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .modal-card h3 {
+      margin-top: 0;
+      color: #d63384;
+    }
+
+    .modal-card input, .modal-card textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #d63384;
+      border-radius: 8px;
+      text-align: center;
+      box-sizing: border-box;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .modal-card button {
+      padding: 8px 18px;
+      background: #d63384;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 3px;
+    }
+
+    .modal-card .cancel-btn {
+      background: #777;
+    }
+
+    /* 💋 ও ❤️ এনিমেশন */
+    .floating-emoji {
+      position: fixed;
+      bottom: -50px;
+      font-size: 28px;
+      animation: floatUp 6s linear infinite;
+      z-index: 1;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-120vh) rotate(20deg); opacity: 0.2; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ১. লগইন পেজ -->
+  <div class="login-container" id="loginContainer">
+    <div class="login-card">
+      <h2>Manha give me password</h2>
+      <input type="password" id="mainPassInput" placeholder="Enter password">
+      <button onclick="checkMainPassword()">Submit</button>
+      <div class="error-msg" id="mainErrorMsg"></div>
+    </div>
+  </div>
+
+  <!-- ২. মূল ওয়েবসাইট -->
+  <div class="main-website" id="mainWebsite">
+    <h1 class="sky-heading">1oct/12aug</h1>
+
+    <!-- অংশ ১: He -->
+    <div class="section-box">
+      <div class="pill-title pill-1" onclick="openPassModal(1)">1. He</div>
+      <div class="unlocked-content" id="content1">
+        <div id="items1"></div>
+        <button class="add-btn" onclick="openAddModal(1)">➕ Add New Content</button>
+      </div>
+    </div>
+
+    <!-- অংশ ২: She -->
+    <div class="section-box">
+      <div class="pill-title pill-2" onclick="openPassModal(2)">2. She</div>
+      <div class="unlocked-content" id="content2">
+        <div id="items2"></div>
+        <button class="add-btn" onclick="openAddModal(2)">➕ Add New Content</button>
+      </div>
+    </div>
+
+    <!-- অংশ ৩: Best Moment -->
+    <div class="section-box">
+      <div class="pill-title pill-3" onclick="openPassModal(3)">3. Best Moment</div>
+      <div class="unlocked-content" id="content3">
+        <div id="items3"></div>
+        <button class="add-btn" onclick="openAddModal(3)">➕ Add New Content</button>
+      </div>
+    </div>
+
+    <!-- অংশ ৪: Best Incident -->
+    <div class="section-box">
+      <div class="pill-title pill-4" onclick="openPassModal(4)">4. Best Incident</div>
+      <div class="unlocked-content" id="content4">
+        <div id="items4"></div>
+        <button class="add-btn" onclick="openAddModal(4)">➕ Add New Content</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- পাসওয়ার্ড দেওয়ার মোডাল -->
+  <div class="modal-overlay" id="passModalOverlay">
+    <div class="modal-card">
+      <h3>Enter Password</h3>
+      <input type="password" id="modalPassInput" placeholder="Password">
+      <br>
+      <button onclick="submitSectionPass()">Unlock</button>
+      <button class="cancel-btn" onclick="closePassModal()">Cancel</button>
+    </div>
+  </div>
+
+  <!-- নতুন কন্টেন্ট বা ছবি যুক্ত করার মোডাল -->
+  <div class="modal-overlay" id="addModalOverlay">
+    <div class="modal-card">
+      <h3>Add Text or Image</h3>
+      <textarea id="addTextInput" placeholder="এখানে কিছু লিখুন বা ইমোজি দিন..." rows="3"></textarea>
+      <p style="font-size: 12px; color: #666; margin: 5px 0;">ছবি যোগ করতে গ্যালারি থেকে সিলেক্ট করুন:</p>
+      <input type="file" id="addImageInput" accept="image/*">
+      <br><br>
+      <button onclick="saveNewContent()">Save</button>
+      <button class="cancel-btn" onclick="closeAddModal()">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    const MAIN_PASSWORD = "1311481";
+    const SECTION_PASSWORD = "2026112";
+    let currentSelectedSection = null;
+
+    // পেজ লোড হলে সেভ করা ডেটা আনা
+    window.onload = function() {
+      for(let i = 1; i <= 4; i++) {
+        loadSavedContent(i);
+      }
+    };
+
+    function checkMainPassword() {
+      const inputVal = document.getElementById("mainPassInput").value;
+      const errorMsg = document.getElementById("mainErrorMsg");
+
+      if (inputVal === MAIN_PASSWORD) {
+        document.getElementById("loginContainer").style.display = "none";
+        document.getElementById("mainWebsite").style.display = "block";
+        document.body.style.background = "#d4edda";
+        startFloatingEmojis();
+      } else {
+        errorMsg.innerText = "somthings wasn’t wrong";
+      }
+    }
+
+    function openPassModal(secNum) {
+      const contentDiv = document.getElementById("content" + secNum);
+      if (contentDiv.style.display === "block") return;
+
+      currentSelectedSection = secNum;
+      document.getElementById("modalPassInput").value = "";
+      document.getElementById("passModalOverlay").style.display = "flex";
+    }
+
+    function closePassModal() {
+      document.getElementById("passModalOverlay").style.display = "none";
+      currentSelectedSection = null;
+    }
+
+    function submitSectionPass() {
+      const inputVal = document.getElementById("modalPassInput").value;
+      if (inputVal === SECTION_PASSWORD) {
+        document.getElementById("content" + currentSelectedSection).style.display = "block";
+        closePassModal();
+      } else {
+        alert("পাসওয়ার্ড ভুল হয়েছে!");
+      }
+    }
+
+    function openAddModal(secNum) {
+      currentSelectedSection = secNum;
+      document.getElementById("addTextInput").value = "";
+      document.getElementById("addImageInput").value = "";
+      document.getElementById("addModalOverlay").style.display = "flex";
+    }
+
+    function closeAddModal() {
+      document.getElementById("addModalOverlay").style.display = "none";
+    }
+
+    function getCurrentFormattedDateTime() {
+      const now = new Date();
+      const options = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true };
+      return now.toLocaleString('en-US', options);
+    }
+
+    function saveNewContent() {
+      const textVal = document.getElementById("addTextInput").value;
+      const fileInput = document.getElementById("addImageInput");
+      const file = fileInput.files[0];
+      const dateTimeStr = getCurrentFormattedDateTime();
+
+      if (!textVal && !file) {
+        alert("অনুগ্রহ করে কিছু লিখুন অথবা একটি ছবি সিলেক্ট করুন!");
+        return;
+      }
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const imgData = e.target.result;
+          saveToStorageAndRender(currentSelectedSection, textVal, imgData, dateTimeStr);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        saveToStorageAndRender(currentSelectedSection, textVal, null, dateTimeStr);
+      }
+
+      closeAddModal();
+    }
+
+    function saveToStorageAndRender(secNum, text, imgData, dateTime) {
+      let savedData = JSON.parse(localStorage.getItem("sectionData_" + secNum)) || [];
+      savedData.push({ text: text, img: imgData, time: dateTime });
+      localStorage.setItem("sectionData_" + secNum, JSON.stringify(savedData));
+      renderItems(secNum, savedData);
+    }
+
+    function loadSavedContent(secNum) {
+      let savedData = JSON.parse(localStorage.getItem("sectionData_" + secNum)) || [];
+      renderItems(secNum, savedData);
+    }
+
+    function renderItems(secNum, dataArray) {
+      const container = document.getElementById("items" + secNum);
+      container.innerHTML = "";
+      
+      dataArray.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "content-item";
+        
+        let html = "";
+        if (item.time) {
+          html += `<span class="timestamp">📅 ${item.time}</span>`;
+        }
+        if (item.text) {
+          html += `<p>${item.text}</p>`;
+        }
+        if (item.img) {
+          html += `<img src="${item.img}" alt="Photo">`;
+        }
+        
+        div.innerHTML = html;
+        container.appendChild(div);
+      });
+    }
+
+    function startFloatingEmojis() {
+      const emojis = ['💋', '❤️'];
+      setInterval(() => {
+        const emojiEl = document.createElement("div");
+        emojiEl.classList.add("floating-emoji");
+        emojiEl.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+        emojiEl.style.left = Math.random() * 92 + "vw";
+        emojiEl.style.fontSize = (Math.random() * 12 + 22) + "px";
+        emojiEl.style.animationDuration = (Math.random() * 3 + 4) + "s";
+        document.body.appendChild(emojiEl);
+
+        setTimeout(() => {
+          emojiEl.remove();
+        }, 7000);
+      }, 400);
+    }
+  </script>
+</body>
+  </html>
